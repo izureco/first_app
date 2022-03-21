@@ -11,7 +11,6 @@ class PostsController < ApplicationController
     # findメソッドの使い方：モデル名.find(レコードのid)
     # @post = Post.find(1)  # レコードの1行目を@postに代入
     @posts = Post.all        # 全てのレコードを@postsに代入し、ビューに渡す
-
   end
 
   # newの動作：新規投稿ページを表示する
