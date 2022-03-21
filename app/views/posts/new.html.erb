@@ -1,0 +1,12 @@
+<%# 新規投稿ページの見た目を作成する %>
+
+<h1>新規投稿ページ</h1>
+
+<%# url:"/post -> フォームの送信先urlを指示する。このときは、送信ボタンが押されると、localhost:3000/postsに飛ぶ %>
+<%# method: :post -> HTTPメソッドのpost(送信)を指定。ちなみに初期値はpostなので、省略も可%>
+<%# local: -> リモート送信を無効にするかどうか指定。trueで無効になる。 %>
+<%= form_with url: "/posts", method: :post, local: true do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit 'tweet' %>
+<% end %>
+
